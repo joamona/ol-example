@@ -1,5 +1,5 @@
 import './style.css';
-import './ol-layerswitcher.css';
+import './node_modules/ol-layerswitcher/dist/ol-layerswitcher.css';
 import { URL_GEOSERVER } from './settings';
 
 import {Map, View} from 'ol';
