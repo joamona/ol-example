@@ -1,8 +1,11 @@
 /**
- * Mode depending on where is geoserver
- * mode 1. Uning an Apache proxy in Windows. Geoserver location: 'http://localhost/geoserver/wms?'
- * mode 2. Windows without Apache. Geoserver location: 'http://localhost:8081/geoserver/wms?'
- * mode 3. Production server Geoserver location: 'https://myserver.com/geoserver/wms?'
+ * Mode depending on where is geoserver, FROM THE POINT OF VIEW OF THE CLIENT. 
+ * mode 1. Visiting the page from Windows, using an Apache proxy in Windows. 
+ *          Geoserver location: 'http://localhost/geoserver/wms?'
+ * mode 2. Visiting the page from Windows, without Apache proxy. 
+ *          Geoserver location: 'http://localhost:8081/geoserver/wms?'
+ * mode 3. Production. Geoserver location is in a remote server: 
+ *                  'https://myserver.com/geoserver/wms?'
 */
 
 var mode = 2;

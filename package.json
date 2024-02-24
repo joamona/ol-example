@@ -1,16 +1,21 @@
 {
-  "name": "my-app",
+  "name": "ol-example",
   "version": "1.0.0",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "vite build --base=http://localhost:2080/ol-example/",
+    "serve": "vite preview",
+    "dev": "vite --host --port 4173",
+    "publish-first-time-on-vm": "vite build --base=http://localhost:2080/ol-example/ && cp -R dist /var/www/html/ol-example",
+    "publish-on-vm": "vite build --base=http://localhost:2080/ol-example/ && rm -R /var/www/html/ol-example && cp -R dist /var/www/html/ol-example",
+    "publish-first-time-on-local": "vite build --base=http://localhost/ol-example/ && cp -R dist /var/www/html/ol-example",
+    "publish-on-local": "vite build --base=http://localhost/ol-example/ && rm -R /var/www/html/ol-example && cp -R dist /var/www/html/ol-example",
+    "help": "echo ' publish-first-time-on-vm and publish-on-vm --> sets base=http://localhost:2080/ol-example/ \n publish-first-time-on-local and publish-on-local --> sets base=http://localhost/ol-example/'"
   },
   "devDependencies": {
     "vite": "^5.1.3"
   },
   "dependencies": {
-    "ol": "latest",
-    "ol-layerswitcher": "^4.1.1"
+    "ol": "latest"
   }
 }
